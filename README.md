@@ -55,7 +55,13 @@ Após executar os comandos acima, a API estará disponível em `http://localhost
     cd src/Refit_Demo.API/
     ```
 
-2. Inicie a aplicação:
+2. Restaure as dependências do projeto:
+
+    ```bash
+    dotnet restore
+    ```
+
+3. Inicie a aplicação:
 
     ```bash
     dotnet run
@@ -91,7 +97,10 @@ A biblioteca **Refit** permite definir interfaces para APIs HTTP externas. O pro
 
 ### Exemplo de requisição
 
-`GET /api/movies/{movieId}`
+```http
+GET /api/movies/{movieId}
+````
+
 Este endpoint retorna os detalhes de um filme específico a partir de seu ID, incluindo título, descrição, data de lançamento e gêneros disponíveis.
 
 ```plaintext
