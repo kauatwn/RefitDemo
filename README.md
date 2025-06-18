@@ -42,7 +42,7 @@ git clone https://github.com/kauatwn/Refit_Demo.git
 3. Execute o container:
 
     ```bash
-    docker run -d -p 5000:8080 --name Refit_Demo.API refitdemoapi:dev
+    docker run --rm -it -p 5000:8080 --name Refit_Demo.API refitdemoapi:dev
     ```
 
 Após executar os comandos acima, a API estará disponível em `http://localhost:5000`.
