@@ -33,7 +33,7 @@ public static class DependencyInjectionExtensions
             var options = provider.GetRequiredService<IOptions<TmdbOptions>>();
             return new RefitSettings
             {
-                AuthorizationHeaderValueGetter = (_, _) => Task.FromResult($"Bearer {options.Value.ReadAccessToken}"),
+                AuthorizationHeaderValueGetter = (_, _) => Task.FromResult(options.Value.ReadAccessToken),
                 ContentSerializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions
                 {
                     PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,

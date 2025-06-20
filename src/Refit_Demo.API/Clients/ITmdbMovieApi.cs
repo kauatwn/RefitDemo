@@ -3,7 +3,7 @@ using Refit_Demo.API.DTOs.Responses;
 
 namespace Refit_Demo.API.Clients;
 
-[Headers("accept: application/json")]
+[Headers("accept: application/json", "Authorization: Bearer")]
 public interface ITmdbMovieApi
 {
     [Get("/movie/{movieId}")]
