@@ -1,4 +1,4 @@
-﻿namespace Refit_Demo.API.DTOs.Responses;
+﻿namespace RefitDemo.API.DTOs.Responses;
 
 public sealed record MovieListResponse(
     int Page,

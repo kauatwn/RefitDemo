@@ -1,4 +1,4 @@
-using Refit_Demo.API.Extensions;
+using RefitDemo.API.Extensions;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,4 +1,4 @@
-﻿namespace Refit_Demo.API.Enums;
+﻿namespace RefitDemo.API.Enums;
 
 public enum TimeWindow
 {

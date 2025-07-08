@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Options;
 using Refit;
-using Refit_Demo.API.Clients;
-using Refit_Demo.API.Options;
-using Refit_Demo.API.Services;
-using Refit_Demo.API.Services.Interfaces;
 using System.Text.Json;
+using RefitDemo.API.Clients;
+using RefitDemo.API.Options;
+using RefitDemo.API.Services;
+using RefitDemo.API.Services.Interfaces;
 
-namespace Refit_Demo.API.Extensions;
+namespace RefitDemo.API.Extensions;
 
 public static class DependencyInjectionExtensions
 {

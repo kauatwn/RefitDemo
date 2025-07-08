@@ -1,4 +1,4 @@
-﻿namespace Refit_Demo.API.Options;
+﻿namespace RefitDemo.API.Options;
 
 public class TmdbOptions
 {

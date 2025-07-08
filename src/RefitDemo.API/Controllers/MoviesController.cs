@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Refit_Demo.API.DTOs.Responses;
-using Refit_Demo.API.Enums;
-using Refit_Demo.API.Services.Interfaces;
 using System.ComponentModel.DataAnnotations;
+using RefitDemo.API.DTOs.Responses;
+using RefitDemo.API.Enums;
+using RefitDemo.API.Services.Interfaces;
 
-namespace Refit_Demo.API.Controllers;
+namespace RefitDemo.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

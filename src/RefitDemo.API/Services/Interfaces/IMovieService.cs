@@ -1,6 +1,6 @@
-﻿using Refit_Demo.API.DTOs.Responses;
+﻿using RefitDemo.API.DTOs.Responses;
 
-namespace Refit_Demo.API.Services.Interfaces;
+namespace RefitDemo.API.Services.Interfaces;
 
 public interface IMovieService
 {

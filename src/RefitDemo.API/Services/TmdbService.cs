@@ -1,8 +1,8 @@
-﻿using Refit_Demo.API.Clients;
-using Refit_Demo.API.DTOs.Responses;
-using Refit_Demo.API.Services.Interfaces;
+﻿using RefitDemo.API.Clients;
+using RefitDemo.API.DTOs.Responses;
+using RefitDemo.API.Services.Interfaces;
 
-namespace Refit_Demo.API.Services;
+namespace RefitDemo.API.Services;
 
 public class TmdbService(ITmdbMovieApi movieApi) : IMovieService
 {

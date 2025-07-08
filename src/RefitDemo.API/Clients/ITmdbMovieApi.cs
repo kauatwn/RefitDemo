@@ -1,7 +1,7 @@
 ﻿using Refit;
-using Refit_Demo.API.DTOs.Responses;
+using RefitDemo.API.DTOs.Responses;
 
-namespace Refit_Demo.API.Clients;
+namespace RefitDemo.API.Clients;
 
 [Headers("accept: application/json", "Authorization: Bearer")]
 public interface ITmdbMovieApi
