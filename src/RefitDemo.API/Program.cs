@@ -14,8 +14,7 @@ builder.Services.AddControllers()
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTmdbApi(builder.Configuration);
-builder.Services.AddServices();
+builder.Services.AddApplicationDependencies(builder.Configuration);
 
 var app = builder.Build();
 
