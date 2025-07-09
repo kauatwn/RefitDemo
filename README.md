@@ -2,6 +2,8 @@
 
 Este projeto demonstra como consumir APIs de forma **declarativa** utilizando a biblioteca [Refit](https://github.com/reactiveui/refit) em aplicações .NET. O exemplo utiliza a API pública do [TMDB (The Movie Database)](https://www.themoviedb.org/documentation/api) para ilustrar requisições HTTP tipadas, limpas e de fácil manutenção.
 
+![TMDB - Página inicial](./images/tmdb.png)
+
 ## Pré-requisitos
 
 Escolha uma das opções para executar o projeto:
@@ -22,7 +24,7 @@ Você pode executar o projeto de duas formas:
 Clone este repositório em sua máquina local:
 
 ```bash
-git clone https://github.com/kauatwn/Refit_Demo.git
+git clone https://github.com/kauatwn/RefitDemo.git
 ```
 
 ### Executar com Docker
@@ -30,19 +32,19 @@ git clone https://github.com/kauatwn/Refit_Demo.git
 1. Navegue até a pasta raiz do projeto:
 
     ```bash
-    cd Refit_Demo/
+    cd RefitDemo/
     ```
 
 2. Construa a imagem Docker:
 
     ```bash
-    docker build -t refitdemoapi:dev -f src/Refit_Demo.API/Dockerfile .
+    docker build -t refitdemoapi:dev -f src/RefitDemo.API/Dockerfile .
     ```
 
 3. Execute o container:
 
     ```bash
-    docker run --rm -it -p 5000:8080 --name Refit_Demo.API refitdemoapi:dev
+    docker run --rm -it -p 5000:8080 --name RefitDemo.API refitdemoapi:dev
     ```
 
 Após executar os comandos acima, a API estará disponível em `http://localhost:5000`.
@@ -52,7 +54,7 @@ Após executar os comandos acima, a API estará disponível em `http://localhost
 1. Navegue até o diretório da API:
 
     ```bash
-    cd src/Refit_Demo.API/
+    cd src/RefitDemo.API/
     ```
 
 2. Restaure as dependências do projeto:
@@ -74,9 +76,9 @@ Após rodar a aplicação, a API ficará acessível em `http://localhost:5288`.
 O projeto está organizado da seguinte forma:
 
 ```plaintext
-Refit_Demo/
+RefitDemo/
 └── src/
-    └── Refit_Demo.API/
+    └── RefitDemo.API/
         ├── Clients/
         │   └── ITmdbMovieApi.cs
         ├── Controllers/
@@ -94,6 +96,8 @@ Refit_Demo/
 ## Como Funciona
 
 A biblioteca **Refit** permite definir interfaces para APIs HTTP externas. O projeto define uma interface para a API do TMDB e a consome de forma tipada, facilitando a manutenção e a clareza do código.
+
+![Swagger - Endpoints disponíveis](./images/swagger.png)
 
 ### Exemplo de requisição
 
