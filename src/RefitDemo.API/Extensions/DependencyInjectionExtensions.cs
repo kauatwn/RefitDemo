@@ -10,25 +10,21 @@ namespace RefitDemo.API.Extensions;
 
 public static class DependencyInjectionExtensions
 {
-    public static void AddTmdbApi(this IServiceCollection services, IConfiguration configuration)
+    public static void AddApplicationDependencies(this IServiceCollection services, IConfiguration configuration)
     {
-        AddOptions(services, configuration);
-        AddMovieClient(services);
+        AddOptionsConfiguration(services, configuration);
+        AddTmdbClient(services);
+        AddApplicationServices(services);
     }
 
-    public static void AddServices(this IServiceCollection services)
-    {
-        services.AddScoped<IMovieService, TmdbService>();
-    }
-
-    private static void AddOptions(IServiceCollection services, IConfiguration configuration)
+    private static void AddOptionsConfiguration(IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<TmdbOptions>(configuration.GetSection(TmdbOptions.SectionName));
     }
 
-    private static void AddMovieClient(IServiceCollection services)
+    private static void AddTmdbClient(IServiceCollection services)
     {
-        services.AddRefitClient<ITmdbMovieApi>(provider =>
+        services.AddRefitClient<ITmdbMovieApi>((provider) =>
         {
             var options = provider.GetRequiredService<IOptions<TmdbOptions>>();
             return new RefitSettings
@@ -36,7 +32,7 @@ public static class DependencyInjectionExtensions
                 AuthorizationHeaderValueGetter = (_, _) => Task.FromResult(options.Value.ReadAccessToken),
                 ContentSerializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions
                 {
-                    PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,
+                    PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower
                 })
             };
         })
@@ -45,5 +41,10 @@ public static class DependencyInjectionExtensions
             client.BaseAddress = new Uri(TmdbOptions.BaseUrl);
             client.Timeout = TimeSpan.FromSeconds(30);
         });
+    }
+
+    private static void AddApplicationServices(IServiceCollection services)
+    {
+        services.AddScoped<IMovieService, TmdbService>();
     }
 }
