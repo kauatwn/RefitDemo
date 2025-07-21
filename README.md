@@ -129,4 +129,5 @@ http://localhost:5288/api/Movies/1113682?language=en-US
 }
 ```
 
-> **Nota:** Para acessar a API do TMDB, é necessário fornecer uma chave de API válida. Consulte a documentação oficial do TMDB para obter sua chave e configure-a no arquivo de configuração do projeto.
+> [!NOTE]
+> Para acessar a API do TMDB, é necessário fornecer uma chave de API válida. Consulte a documentação oficial do TMDB para obter sua chave e configure-a no arquivo de configuração do projeto.
